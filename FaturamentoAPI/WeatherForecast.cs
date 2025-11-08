@@ -1,4 +1,4 @@
-namespace EstoqueAPI
+namespace FaturamentoAPI
 {
     public class WeatherForecast
     {

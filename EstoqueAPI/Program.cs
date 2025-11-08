@@ -17,12 +17,10 @@ namespace EstoqueAPI
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             builder.Services.AddDbContext<EstoqueContext>(options =>
                 options.UseMySql(builder.Configuration.GetConnectionString("MySqlConnection"),
                 new MySqlServerVersion(new Version(8, 0, 43))));
-            builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-
-
 
             var app = builder.Build();
 

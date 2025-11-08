@@ -111,5 +111,44 @@ namespace EstoqueAPI.Controllers
         {
             return _context.Produtos.Any(e => e.Codigo == id);
         }
+
+        [HttpPost("{codigo}/decrementar")]
+        public async Task<IActionResult> DecrementarSaldo(int codigo, [FromBody] DecrementoDto dto)
+        {
+            if (dto == null || dto.Quantidade <= 0)
+                return BadRequest("Quantidade inválida.");
+
+            var rows = await _context.Database.ExecuteSqlRawAsync(
+                "UPDATE Produtos SET Saldo = Saldo - {0} WHERE Codigo = {1} AND Saldo >= {0}",
+                dto.Quantidade, codigo);
+
+            if (rows == 0)
+            {
+                var exists = await _context.Produtos.AnyAsync(p => p.Codigo == codigo);
+                if (!exists) return NotFound();
+                return BadRequest("Saldo insuficiente.");
+            }
+
+            return Ok();
+        }
+
+        [HttpPost("{codigo}/incrementar")]
+        public async Task<IActionResult> IncrementarSaldo(int codigo, [FromBody] DecrementoDto dto)
+        {
+            if (dto == null || dto.Quantidade <= 0)
+                return BadRequest("Quantidade inválida.");
+
+            var rows = await _context.Database.ExecuteSqlRawAsync(
+                "UPDATE Produtos SET Saldo = Saldo + {0} WHERE Codigo = {1}",
+                dto.Quantidade, codigo);
+
+            if (rows == 0)
+            {
+                var exists = await _context.Produtos.AnyAsync(p => p.Codigo == codigo);
+                if (!exists) return NotFound();
+            }
+
+            return Ok();
+        }
     }
 }

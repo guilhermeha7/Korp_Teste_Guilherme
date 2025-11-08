@@ -1,9 +1,31 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36616.10 d17.14
+VisualStudioVersion = 17.14.36616.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstoqueAPI", "EstoqueAPI\EstoqueAPI.csproj", "{234B21BF-D022-4AA1-AB56-678F8D09E8E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaturamentoAPI", "FaturamentoAPI\FaturamentoAPI.csproj", "{FAB298AA-077F-49FA-A8F7-6EA38A4C3914}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "frontend-notas", "frontend-notas\", "{7207437B-F33B-DC51-2F33-8355EAE9102A}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_57653"
+		Debug.AspNetCompiler.PhysicalPath = "frontend-notas\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57653\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_57653"
+		Release.AspNetCompiler.PhysicalPath = "frontend-notas\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57653\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "57653"
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +37,14 @@ Global
 		{234B21BF-D022-4AA1-AB56-678F8D09E8E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{234B21BF-D022-4AA1-AB56-678F8D09E8E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{234B21BF-D022-4AA1-AB56-678F8D09E8E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAB298AA-077F-49FA-A8F7-6EA38A4C3914}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAB298AA-077F-49FA-A8F7-6EA38A4C3914}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAB298AA-077F-49FA-A8F7-6EA38A4C3914}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAB298AA-077F-49FA-A8F7-6EA38A4C3914}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7207437B-F33B-DC51-2F33-8355EAE9102A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7207437B-F33B-DC51-2F33-8355EAE9102A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7207437B-F33B-DC51-2F33-8355EAE9102A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{7207437B-F33B-DC51-2F33-8355EAE9102A}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
